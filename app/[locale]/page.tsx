@@ -46,16 +46,9 @@ export default async function HomePage({ params }: PageProps) {
         </div>
       </section>
 
-      {/* Top Skills Section */}
+      {/* Skills Carousel Only */}
       <section>
-        <h2 className="text-3xl font-bold mb-8">{dict.skills.title}</h2>
         <SkillsCarousel />
-        <Link
-          href={`/${locale}/skills`}
-          className="inline-block mt-8 text-accent font-medium hover:underline"
-        >
-          View all skills →
-        </Link>
       </section>
     </div>
   )

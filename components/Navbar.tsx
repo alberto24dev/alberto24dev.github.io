@@ -1,4 +1,11 @@
+'use client'
+
 import Link from 'next/link'
+import dynamic from 'next/dynamic'
+
+const ThemeToggle = dynamic(() => import('./ThemeToggle').then(mod => mod.ThemeToggle), {
+  ssr: false,
+})
 
 interface NavLink {
   href: string
@@ -28,6 +35,7 @@ export function Navbar({ locale, links }: NavbarProps) {
                 {link.label}
               </Link>
             ))}
+            <ThemeToggle />
             <LocaleSwitcher locale={locale} />
           </div>
         </div>

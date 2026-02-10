@@ -1,130 +1,81 @@
 'use client'
 
-import { useEffect, useState } from 'react'
-
 interface SkillLogo {
-  name: string
-  emoji: string
-  color: string
+    name: string
+    image: string // URL or path to image
 }
 
 const skillsData: SkillLogo[] = [
-  { name: 'Python', emoji: '🐍', color: 'text-blue-500' },
-  { name: 'Swift', emoji: '🍎', color: 'text-orange-500' },
-  { name: 'Docker', emoji: '🐳', color: 'text-blue-400' },
-  { name: 'AWS', emoji: '☁️', color: 'text-orange-400' },
-  { name: 'MongoDB', emoji: '🍃', color: 'text-green-500' },
-  { name: 'FastAPI', emoji: '⚡', color: 'text-yellow-500' },
+    { name: 'Python', image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg' },
+    { name: 'Swift', image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swift/swift-original.svg' },
+    { name: 'Docker', image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg' },
+    { name: 'AWS', image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg' },
+    { name: 'MongoDB', image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg' },
+    { name: 'FastAPI', image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg' },
 ]
 
 export function SkillsCarousel() {
-  const [currentIndex, setCurrentIndex] = useState(0)
-  const [isAutoplay, setIsAutoplay] = useState(true)
-
-  useEffect(() => {
-    if (!isAutoplay) return
-
-    const interval = setInterval(() => {
-      setCurrentIndex(prev => (prev + 1) % skillsData.length)
-    }, 3000)
-
-    return () => clearInterval(interval)
-  }, [isAutoplay])
-
-  const goToPrevious = () => {
-    setIsAutoplay(false)
-    setCurrentIndex(prev => (prev - 1 + skillsData.length) % skillsData.length)
-  }
-
-  const goToNext = () => {
-    setIsAutoplay(false)
-    setCurrentIndex(prev => (prev + 1) % skillsData.length)
-  }
-
-  const goToSlide = (index: number) => {
-    setIsAutoplay(false)
-    setCurrentIndex(index)
-  }
-
-  return (
-    <div className="w-full">
-      {/* Carrusel principal */}
-      <div className="relative bg-gradient-to-r from-accent/10 to-accent/5 rounded-lg overflow-hidden mb-6">
-        <div className="flex justify-center items-center h-48">
-          <div className="relative w-full h-full flex items-center justify-center">
-            {skillsData.map((skill, index) => (
-              <div
-                key={skill.name}
-                className={`absolute transition-all duration-500 ease-in-out transform ${
-                  index === currentIndex
-                    ? 'opacity-100 scale-100'
-                    : 'opacity-0 scale-75'
-                }`}
-              >
-                <div className="flex flex-col items-center gap-4">
-                  <span className="text-8xl">{skill.emoji}</span>
-                  <div className="text-center">
-                    <p className="text-2xl font-bold text-foreground">{skill.name}</p>
-                  </div>
+    return (
+        <div className="w-full bg-background py-12 overflow-hidden relative">
+            <style>{`
+        @keyframes scroll {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+        .carousel-scroll {
+          animation: scroll 40s linear infinite;
+          will-change: transform;
+          display: flex;
+        }
+        .carousel-fade::before {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 0;
+          bottom: 0;
+          width: 100px;
+          background: linear-gradient(to right, hsl(var(--background)), transparent);
+          z-index: 10;
+          pointer-events: none;
+        }
+        .carousel-fade::after {
+          content: '';
+          position: absolute;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          width: 100px;
+          background: linear-gradient(to left, hsl(var(--background)), transparent);
+          z-index: 10;
+          pointer-events: none;
+        }
+      `}</style>
+            <div className="carousel-fade">
+                <div className="carousel-scroll flex gap-8">
+                    {/* Duplicamos el array múltiples veces para garantizar scroll infinito */}
+                    {[...Array(3)].flatMap((_, index) => 
+                        skillsData.map((skill) => (
+                            <div
+                                key={`${skill.name}-${index}`}
+                                className="flex flex-col items-center justify-center p-6 bg-card rounded-xl border border-border shadow-md hover:shadow-lg transition-shadow w-40 h-40 flex-shrink-0"
+                            >
+                                <img 
+                                    src={skill.image} 
+                                    alt={skill.name} 
+                                    className="w-16 h-16 mb-3 object-contain"
+                                    onError={(e) => {
+                                        // Fallback si la imagen no carga
+                                        e.currentTarget.style.display = 'none';
+                                    }}
+                                />
+                                <p className="text-sm font-semibold text-foreground text-center">
+                                    {skill.name}
+                                </p>
+                            </div>
+                        ))
+                    )}
                 </div>
-              </div>
-            ))}
-          </div>
+            </div>
         </div>
-
-        {/* Botones de navegación */}
-        <button
-          onClick={goToPrevious}
-          onMouseEnter={() => setIsAutoplay(false)}
-          onMouseLeave={() => setIsAutoplay(true)}
-          className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 bg-background/80 hover:bg-background p-2 rounded-full transition-colors"
-        >
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-          </svg>
-        </button>
-
-        <button
-          onClick={goToNext}
-          onMouseEnter={() => setIsAutoplay(false)}
-          onMouseLeave={() => setIsAutoplay(true)}
-          className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 bg-background/80 hover:bg-background p-2 rounded-full transition-colors"
-        >
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-          </svg>
-        </button>
-      </div>
-
-      {/* Indicadores (dots) */}
-      <div className="flex justify-center gap-2">
-        {skillsData.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => goToSlide(index)}
-            className={`h-2 rounded-full transition-all ${
-              index === currentIndex
-                ? 'bg-accent w-8'
-                : 'bg-border w-2 hover:bg-accent/50'
-            }`}
-          />
-        ))}
-      </div>
-
-      {/* Vista en miniatura de todos los skills */}
-      <div className="mt-8 grid grid-cols-3 sm:grid-cols-6 gap-4">
-        {skillsData.map((skill) => (
-          <div
-            key={skill.name}
-            className="flex flex-col items-center justify-center p-4 rounded-lg border border-border hover:border-accent hover:bg-accent/5 transition-all cursor-pointer"
-          >
-            <span className="text-3xl mb-2">{skill.emoji}</span>
-            <p className="text-xs font-medium text-center text-muted-foreground hover:text-foreground">
-              {skill.name}
-            </p>
-          </div>
-        ))}
-      </div>
-    </div>
-  )
+    )
 }
