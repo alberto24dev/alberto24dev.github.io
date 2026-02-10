@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import { getDictionary } from '@/i18n/get-dictionary'
-import { getSkillsFromProjects } from '@/lib/skills'
-import { SkillTag } from '@/components/SkillTag'
+import { SkillsCarousel } from '@/components/SkillsCarousel'
 import bio from '@/data/bio.json'
 
 interface PageProps {
@@ -13,8 +12,6 @@ interface PageProps {
 export default async function HomePage({ params }: PageProps) {
   const { locale } = await params
   const dict = await getDictionary(locale as any)
-  const skills = getSkillsFromProjects()
-  const topSkills = skills.slice(0, 6)
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -52,19 +49,10 @@ export default async function HomePage({ params }: PageProps) {
       {/* Top Skills Section */}
       <section>
         <h2 className="text-3xl font-bold mb-8">{dict.skills.title}</h2>
-        <div className="flex flex-wrap gap-3">
-          {topSkills.map(skill => (
-            <SkillTag
-              key={skill.name}
-              name={skill.name}
-              projectCount={skill.count}
-              locale={locale}
-            />
-          ))}
-        </div>
+        <SkillsCarousel />
         <Link
           href={`/${locale}/skills`}
-          className="inline-block mt-6 text-accent font-medium hover:underline"
+          className="inline-block mt-8 text-accent font-medium hover:underline"
         >
           View all skills →
         </Link>
