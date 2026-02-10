@@ -1,47 +1,66 @@
 [
   {
     "id": "1",
-    "title": "E-Commerce Platform",
-    "description": "A full-featured e-commerce platform with real-time inventory management and payment processing",
-    "shortDescription": "Full-stack e-commerce solution with payment integration",
-    "technologies": ["FastAPI", "MongoDB", "AWS S3", "React", "Docker", "PostgreSQL"],
-    "image": "/projects/ecommerce.jpg",
+    "title": "AYETASKS",
+    "description": "Comprehensive daily task management mobile app featuring sub-task support and advanced scheduling.",
+    "shortDescription": "Swift task manager with FastAPI and MongoDB backend",
+    "technologies": [
+      "Swift",
+      "Python",
+      "FastAPI",
+      "MongoDB"
+    ],
+    "image": "/projects/ayetasks.jpg",
     "links": {
-      "github": "https://github.com/alberto24dev/ecommerce",
-      "demo": "https://ecommerce-demo.alberto24dev.me"
+      "github": "https://github.com/alberto24dev/ayetasks",
+      "demo": ""
     },
-    "details": "Built a scalable e-commerce platform using FastAPI backend with MongoDB for flexible data storage. Implemented AWS S3 for product image management and Docker for containerization. The frontend uses React for a responsive UI.",
-    "role": "Lead Developer",
-    "year": "2024"
+    "details": "Native iOS application designed for granular task management. Features a robust backend architecture using Python (FastAPI) and MongoDB to handle complex data relationships like sub-tasks and recurring schedules, ensuring a responsive and native user experience.",
+    "role": "Solo Developer",
+    "year": "2026"
   },
   {
     "id": "2",
-    "title": "Mobile Fitness App",
-    "description": "iOS fitness tracking application with real-time data sync and cloud storage",
-    "shortDescription": "Cross-platform fitness tracking application",
-    "technologies": ["Swift", "AWS DynamoDB", "AWS Amplify", "Python Lambda"],
-    "image": "/projects/fitness.jpg",
+    "title": "AYERECIPES",
+    "description": "Cloud-native recipe management platform with containerized backend and scalable media storage.",
+    "shortDescription": "Swift recipe app with FastAPI, Docker and AWS S3",
+    "technologies": [
+      "Swift",
+      "Python",
+      "FastAPI",
+      "MongoDB",
+      "Docker",
+      "AWS S3"
+    ],
+    "image": "/projects/ayerecipes.jpg",
     "links": {
-      "github": "https://github.com/alberto24dev/fitness-app",
+      "github": "https://github.com/alberto24dev/ayerecipes",
       "demo": ""
     },
-    "details": "Developed a native iOS app in Swift for fitness tracking with real-time cloud sync using AWS Amplify. Implemented serverless backend with Python Lambda functions and DynamoDB for data persistence.",
+    "details": "Scalable iOS app for recipe management. The backend is containerized with Docker for consistent deployment and leverages MongoDB Atlas for data handling and AWS S3 for efficient cloud media storage, representing a production-ready cloud architecture.",
     "role": "Solo Developer",
-    "year": "2023"
+    "year": "2026"
   },
   {
     "id": "3",
-    "title": "Analytics Dashboard",
-    "description": "Real-time analytics dashboard for business metrics and data visualization",
-    "shortDescription": "Real-time analytics and reporting system",
-    "technologies": ["React", "Node.js", "PostgreSQL", "Redis", "Docker", "AWS EC2"],
-    "image": "/projects/analytics.jpg",
+    "title": "MEDISCANN",
+    "description": "Cross-platform mobile application for dermatological disease detection using a custom-trained MobileNetV2 AI model.",
+    "shortDescription": "AI-powered dermatological analysis app with MobileNetV2",
+    "technologies": [
+      "React Native",
+      "Expo",
+      "Python",
+      "TensorFlow",
+      "Flask",
+      "Docker"
+    ],
+    "image": "/projects/mediscann.jpg",
     "links": {
-      "github": "https://github.com/alberto24dev/analytics-dashboard",
-      "demo": "https://analytics-demo.alberto24dev.me"
+      "github": "https://github.com/Sadiec7/MediScann",
+      "demo": ""
     },
-    "details": "Created a high-performance analytics dashboard using React with real-time data updates via WebSockets. Backend built with Node.js, PostgreSQL for data storage, and Redis for caching. Deployed on AWS EC2 with Docker.",
-    "role": "Full Stack Developer",
-    "year": "2024"
+    "details": "A comprehensive system composed of a React Native mobile client (Expo), a React web dashboard for administration, and a Python-based AI backend. The core features a convolutional neural network (MobileNetV2) exposed via a REST API (Flask/FastAPI) to classify dermatological conditions from user images in real-time. The entire architecture is containerized and orchestrated using Docker Compose.",
+    "role": "Developer",
+    "year": "2025"
   }
 ]

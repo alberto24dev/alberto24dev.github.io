@@ -1,6 +1,6 @@
 import { getDictionary } from '@/i18n/get-dictionary'
 import { getSkillsFromProjects } from '@/lib/skills'
-import { SkillTag } from '@/components/SkillTag'
+import { SkillTile } from '@/components/SkillTile'
 import { i18n } from '@/i18n/config'
 
 export function generateStaticParams() {
@@ -31,14 +31,12 @@ export default async function SkillsPage({
 
       <section>
         <h2 className="text-2xl font-bold mb-6">All Skills</h2>
-        <div className="flex flex-wrap gap-3">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {skills.map(skill => (
-            <SkillTag
+            <SkillTile
               key={skill.name}
               name={skill.name}
-              projectCount={skill.count}
               locale={locale}
-              isClickable={true}
             />
           ))}
         </div>

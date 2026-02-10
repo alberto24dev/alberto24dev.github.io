@@ -84,14 +84,14 @@ export default async function ContactPage({ params }: PageProps) {
               </a>
             )}
 
-            {bio.social?.twitter && (
+            {bio.social?.instagram && (
               <a
-                href={bio.social.twitter}
+                href={bio.social.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 p-4 bg-card border border-border rounded-lg hover:shadow-lg transition-shadow"
               >
-                <span className="font-semibold">{dict.contact.twitter}</span>
+                <span className="font-semibold">Instagram</span>
                 <span className="text-muted-foreground text-sm">→</span>
               </a>
             )}
