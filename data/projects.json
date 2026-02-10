@@ -1,0 +1,47 @@
+[
+  {
+    "id": "1",
+    "title": "E-Commerce Platform",
+    "description": "A full-featured e-commerce platform with real-time inventory management and payment processing",
+    "shortDescription": "Full-stack e-commerce solution with payment integration",
+    "technologies": ["FastAPI", "MongoDB", "AWS S3", "React", "Docker", "PostgreSQL"],
+    "image": "/projects/ecommerce.jpg",
+    "links": {
+      "github": "https://github.com/alberto24dev/ecommerce",
+      "demo": "https://ecommerce-demo.alberto24dev.me"
+    },
+    "details": "Built a scalable e-commerce platform using FastAPI backend with MongoDB for flexible data storage. Implemented AWS S3 for product image management and Docker for containerization. The frontend uses React for a responsive UI.",
+    "role": "Lead Developer",
+    "year": "2024"
+  },
+  {
+    "id": "2",
+    "title": "Mobile Fitness App",
+    "description": "iOS fitness tracking application with real-time data sync and cloud storage",
+    "shortDescription": "Cross-platform fitness tracking application",
+    "technologies": ["Swift", "AWS DynamoDB", "AWS Amplify", "Python Lambda"],
+    "image": "/projects/fitness.jpg",
+    "links": {
+      "github": "https://github.com/alberto24dev/fitness-app",
+      "demo": ""
+    },
+    "details": "Developed a native iOS app in Swift for fitness tracking with real-time cloud sync using AWS Amplify. Implemented serverless backend with Python Lambda functions and DynamoDB for data persistence.",
+    "role": "Solo Developer",
+    "year": "2023"
+  },
+  {
+    "id": "3",
+    "title": "Analytics Dashboard",
+    "description": "Real-time analytics dashboard for business metrics and data visualization",
+    "shortDescription": "Real-time analytics and reporting system",
+    "technologies": ["React", "Node.js", "PostgreSQL", "Redis", "Docker", "AWS EC2"],
+    "image": "/projects/analytics.jpg",
+    "links": {
+      "github": "https://github.com/alberto24dev/analytics-dashboard",
+      "demo": "https://analytics-demo.alberto24dev.me"
+    },
+    "details": "Created a high-performance analytics dashboard using React with real-time data updates via WebSockets. Backend built with Node.js, PostgreSQL for data storage, and Redis for caching. Deployed on AWS EC2 with Docker.",
+    "role": "Full Stack Developer",
+    "year": "2024"
+  }
+]

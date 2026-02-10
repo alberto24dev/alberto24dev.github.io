@@ -1,0 +1,41 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "projects": "Proyectos",
+    "skills": "Habilidades",
+    "contact": "Contacto"
+  },
+  "home": {
+    "title": "Hola, soy Alberto",
+    "subtitle": "Desarrollador Full Stack",
+    "bio": "Soy un desarrollador apasionado con experiencia en tecnologías web modernas. Construyo aplicaciones escalables y me encanta trabajar con herramientas de punta.",
+    "cta": "Ver Mi Trabajo",
+    "highlights": "Destacados"
+  },
+  "projects": {
+    "title": "Mis Proyectos",
+    "description": "Aquí hay algunos de los proyectos en los que he trabajado",
+    "technologies": "Tecnologías",
+    "viewDetails": "Ver Detalles",
+    "github": "GitHub",
+    "demo": "Ver Demo"
+  },
+  "skills": {
+    "title": "Mis Habilidades",
+    "description": "Tecnologías y herramientas con las que trabajo",
+    "usedIn": "Usado en proyectos"
+  },
+  "contact": {
+    "title": "Ponte en Contacto",
+    "description": "Siéntete libre de contactarme para oportunidades o simplemente conversar",
+    "email": "Email",
+    "phone": "Teléfono",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "twitter": "Twitter"
+  },
+  "footer": {
+    "made": "Hecho con ❤️ por Alberto",
+    "year": "2026"
+  }
+}

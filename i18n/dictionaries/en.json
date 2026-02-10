@@ -1,0 +1,41 @@
+{
+  "nav": {
+    "home": "Home",
+    "projects": "Projects",
+    "skills": "Skills",
+    "contact": "Contact"
+  },
+  "home": {
+    "title": "Hi, I'm Alberto",
+    "subtitle": "Full Stack Developer",
+    "bio": "I'm a passionate developer with expertise in modern web technologies. I build scalable applications and love working with cutting-edge tools.",
+    "cta": "View My Work",
+    "highlights": "Highlights"
+  },
+  "projects": {
+    "title": "My Projects",
+    "description": "Here are some of the projects I've worked on",
+    "technologies": "Technologies",
+    "viewDetails": "View Details",
+    "github": "GitHub",
+    "demo": "Live Demo"
+  },
+  "skills": {
+    "title": "My Skills",
+    "description": "Technologies and tools I work with",
+    "usedIn": "Used in projects"
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "description": "Feel free to reach out for opportunities or just a chat",
+    "email": "Email",
+    "phone": "Phone",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "twitter": "Twitter"
+  },
+  "footer": {
+    "made": "Made with ❤️ by Alberto",
+    "year": "2026"
+  }
+}

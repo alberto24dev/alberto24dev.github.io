@@ -1,0 +1,19 @@
+{
+  "name": "Alberto Dev",
+  "title": "Full Stack Developer",
+  "bio": "I'm a passionate developer with expertise in modern web technologies and cloud services.",
+  "email": "contact@alberto24dev.me",
+  "phone": "+1 (555) 123-4567",
+  "location": "San Francisco, CA",
+  "social": {
+    "github": "https://github.com/alberto24dev",
+    "linkedin": "https://linkedin.com/in/alberto24dev",
+    "twitter": "https://twitter.com/alberto24dev"
+  },
+  "highlights": [
+    "Full Stack Web Development",
+    "Cloud Architecture (AWS, Azure)",
+    "Mobile Development (Swift, React Native)",
+    "Database Design & Optimization"
+  ]
+}
