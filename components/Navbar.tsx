@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import dynamic from 'next/dynamic'
 
 const ThemeToggle = dynamic(() => import('./ThemeToggle').then(mod => mod.ThemeToggle), {
@@ -49,13 +50,15 @@ interface LocaleSwitcherProps {
 }
 
 function LocaleSwitcher({ locale }: LocaleSwitcherProps) {
+  const pathname = usePathname()
   const nextLocale = locale === 'en' ? 'es' : 'en'
-  const currentPath = typeof window !== 'undefined' ? window.location.pathname : ''
-  const newPath = currentPath.replace(`/${locale}`, `/${nextLocale}`)
+  
+  // Replace the current locale in the pathname with the new one
+  const newPath = pathname ? pathname.replace(`/${locale}`, `/${nextLocale}`) : `/${nextLocale}`
 
   return (
     <Link
-      href={newPath || `/${nextLocale}`}
+      href={newPath}
       className="text-sm font-medium px-3 py-1 rounded-md border border-border hover:bg-accent hover:text-accent-foreground transition-colors"
     >
       {locale === 'en' ? 'ES' : 'EN'}

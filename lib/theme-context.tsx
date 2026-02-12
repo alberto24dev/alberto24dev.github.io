@@ -15,10 +15,8 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
   const [theme, setTheme] = useState<Theme>('light')
-  const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
-    setMounted(true)
     // Check localStorage
     const savedTheme = localStorage.getItem('theme') as Theme | null
     
@@ -49,10 +47,6 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({
     setTheme(newTheme)
     localStorage.setItem('theme', newTheme)
     applyTheme(newTheme)
-  }
-
-  if (!mounted) {
-    return <>{children}</>
   }
 
   return (
