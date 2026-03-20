@@ -2,20 +2,21 @@
   {
     "id": "1",
     "title": "AYETASKS",
-    "description": "Comprehensive daily task management mobile app featuring sub-task support and advanced scheduling.",
+    "description": "Task management system with infinite nested hierarchy, flexible scheduling, and a native iOS app backed by FastAPI and MongoDB.",
     "shortDescription": "Swift task manager with FastAPI and MongoDB backend",
     "technologies": [
       "Swift",
       "Python",
       "FastAPI",
-      "MongoDB"
+      "MongoDB",
+      "Docker"
     ],
     "image": "/projects/ayetasks.jpg",
     "links": {
-      "github": "https://github.com/alberto24dev/ayetasks",
+      "github": "",
       "demo": ""
     },
-    "details": "Native iOS application designed for granular task management. Features a robust backend architecture using Python (FastAPI) and MongoDB to handle complex data relationships like sub-tasks and recurring schedules, ensuring a responsive and native user experience.",
+    "details": "Task management system built on the principle that everything is a task. The native iOS app (Swift, MVVM) pairs with a Python backend (FastAPI + MongoDB Atlas via Beanie ODM) that supports up to 25 levels of nested task hierarchy, flexible time management (exact dates, scoped periods, recurring tasks), hex colour tagging, and JWT authentication. Full stack orchestrated with Docker Compose.",
     "role": "Solo Developer",
     "year": "2026"
   },
@@ -34,7 +35,7 @@
     ],
     "image": "/projects/ayerecipes.jpg",
     "links": {
-      "github": "https://github.com/alberto24dev/ayerecipes",
+      "github": "",
       "demo": ""
     },
     "details": "Scalable iOS app for recipe management. The backend is containerized with Docker for consistent deployment and leverages MongoDB Atlas for data handling and AWS S3 for efficient cloud media storage, representing a production-ready cloud architecture.",
@@ -43,6 +44,140 @@
   },
   {
     "id": "3",
+    "title": "AYEGIRLFRIEND",
+    "description": "AI-powered conversational companion iOS app with a real-time FastAPI backend and persistent memory.",
+    "shortDescription": "Swift AI companion app with FastAPI and MongoDB",
+    "technologies": [
+      "Swift",
+      "Python",
+      "FastAPI",
+      "MongoDB"
+    ],
+    "image": "/projects/ayegirlfriend.jpg",
+    "links": {
+      "github": "",
+      "demo": ""
+    },
+    "details": "Native iOS application that delivers a personalised AI companion experience. The Python backend (FastAPI + MongoDB) handles conversation history, user context and persistent memory, enabling coherent multi-session interactions through a clean and responsive native interface.",
+    "role": "Solo Developer",
+    "year": "2026"
+  },
+  {
+    "id": "4",
+    "title": "AYESTOCK",
+    "description": "Full-stack inventory management web app with a modern React/Next.js dashboard and RESTful FastAPI backend.",
+    "shortDescription": "Next.js inventory dashboard with FastAPI and MongoDB",
+    "technologies": [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Python",
+      "FastAPI",
+      "MongoDB",
+      "Bootstrap"
+    ],
+    "image": "/projects/ayestock.jpg",
+    "links": {
+      "github": "",
+      "demo": ""
+    },
+    "details": "Web-based stock and inventory management system. The frontend is built with Next.js and Bootstrap for a responsive dashboard experience, while the Python backend (FastAPI + MongoDB) exposes a clean REST API for product tracking, stock levels and reporting.",
+    "role": "Solo Developer",
+    "year": "2026"
+  },
+  {
+    "id": "5",
+    "title": "AYEMUSICVISUALIZER",
+    "description": "Real-time audio visualisation app for iOS that reacts to music through animated waveforms and spectrum displays.",
+    "shortDescription": "Swift audio visualiser with real-time waveform rendering",
+    "technologies": [
+      "Swift",
+      "AVFoundation",
+      "Accelerate"
+    ],
+    "image": "/projects/ayemusicvisualizer.jpg",
+    "links": {
+      "github": "",
+      "demo": ""
+    },
+    "details": "Native iOS application that captures and processes live audio input to drive real-time visual animations. Leverages Apple's AVFoundation and Accelerate frameworks for low-latency FFT analysis, rendering dynamic waveform and spectrum views fully in Swift.",
+    "role": "Solo Developer",
+    "year": "2025"
+  },
+  {
+    "id": "6",
+    "title": "AYECLICKER",
+    "description": "macOS utility app for customisable global hotkeys and automated click sequences.",
+    "shortDescription": "macOS hotkey and auto-clicker utility in Swift",
+    "technologies": [
+      "Swift",
+      "AppKit"
+    ],
+    "image": "/projects/ayeclicker.jpg",
+    "links": {
+      "github": "",
+      "demo": ""
+    },
+    "details": "Lightweight macOS menu-bar application built with Swift and AppKit. Allows users to define system-wide hotkeys and configure automated click sequences, demonstrating low-level event handling and macOS accessibility APIs.",
+    "role": "Solo Developer",
+    "year": "2025"
+  },
+  {
+    "id": "7",
+    "title": "FATIMA RESENDIZ",
+    "description": "Full-stack photography platform for Fátima Resendiz with a public portfolio, native iOS client portal, email marketing automation, and gallery delivery.",
+    "shortDescription": "Next.js + Swift photography platform with FastAPI, Docker and Railway",
+    "technologies": [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Swift",
+      "SwiftUI",
+      "Python",
+      "FastAPI",
+      "MongoDB",
+      "Docker",
+      "Railway"
+    ],
+    "image": "/projects/fatima.jpg",
+    "links": {
+      "github": "",
+      "demo": ""
+    },
+    "details": "Multi-platform system built for a professional photographer. The bilingual (EN/ES) Next.js 16 public site showcases the portfolio and captures leads. A native SwiftUI iOS app gives clients secure access to their Pic-Time galleries via JWT-authenticated sessions. The FastAPI + MongoDB backend (Beanie ODM) handles authentication, lead management, testimonials, and email marketing automation via Brevo. Deployed with Docker on Railway.",
+    "role": "Freelance Developer",
+    "year": "2026"
+  },
+  {
+    "id": "8",
+    "title": "BLINDY",
+    "description": "Cross-platform mobile application for a professional services business, featuring biometric authentication, real-time notifications, Stripe payments and Google Maps integration.",
+    "shortDescription": "Ionic/Angular app with ASP.NET Web API and SQL Server",
+    "technologies": [
+      "Ionic",
+      "Angular",
+      "TypeScript",
+      "Capacitor",
+      "C#",
+      "ASP.NET Web API",
+      "Entity Framework",
+      "SQL Server",
+      "Firebase",
+      "Stripe",
+      "SignalR"
+    ],
+    "image": "/projects/blindy.jpg",
+    "links": {
+      "github": "",
+      "demo": ""
+    },
+    "details": "Enterprise-grade hybrid mobile application (iOS + Android) built with Ionic/Angular and Capacitor. Integrates biometric authentication (fingerprint/Face ID), Stripe payment processing, Google Maps, Firebase push notifications and real-time updates via SignalR. The backend is a .NET 4.7 ASP.NET Web API with Entity Framework and SQL Server.",
+    "role": "Developer",
+    "year": "2025"
+  },
+  {
+    "id": "9",
     "title": "MEDISCANN",
     "description": "Cross-platform mobile application for dermatological disease detection using a custom-trained MobileNetV2 AI model.",
     "shortDescription": "AI-powered dermatological analysis app with MobileNetV2",
@@ -59,7 +194,7 @@
       "github": "https://github.com/Sadiec7/MediScann",
       "demo": ""
     },
-    "details": "A comprehensive system composed of a React Native mobile client (Expo), a React web dashboard for administration, and a Python-based AI backend. The core features a convolutional neural network (MobileNetV2) exposed via a REST API (Flask/FastAPI) to classify dermatological conditions from user images in real-time. The entire architecture is containerized and orchestrated using Docker Compose.",
+    "details": "A comprehensive system composed of a React Native mobile client (Expo), a React web dashboard for administration, and a Python-based AI backend. The core features a convolutional neural network (MobileNetV2) exposed via a REST API (Flask/FastAPI) to classify dermatological conditions from user images in real-time. The entire architecture is containerised and orchestrated using Docker Compose.",
     "role": "Developer",
     "year": "2025"
   }
