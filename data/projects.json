@@ -2,8 +2,8 @@
   {
     "id": "1",
     "title": "AYETASKS",
-    "description": "Task management system with infinite nested hierarchy, flexible scheduling, and a native iOS app backed by FastAPI and MongoDB.",
-    "shortDescription": "Swift task manager with FastAPI and MongoDB backend",
+    "description": "Everything is a task — build your own hierarchy up to 25 levels deep, with polymorphic due dates (exact, scoped, recurring) and color-coded tagging, all from a native iOS app.",
+    "shortDescription": "Infinite-depth task hierarchy with polymorphic scheduling for iOS",
     "technologies": [
       "Swift",
       "Python",
@@ -13,18 +13,18 @@
     ],
     "image": "/projects/ayetasks.jpg",
     "links": {
-      "github": "",
+      "github": "https://github.com/alberto24dev/AyeTasks",
       "demo": ""
     },
-    "details": "Task management system built on the principle that everything is a task. The native iOS app (Swift, MVVM) pairs with a Python backend (FastAPI + MongoDB Atlas via Beanie ODM) that supports up to 25 levels of nested task hierarchy, flexible time management (exact dates, scoped periods, recurring tasks), hex colour tagging, and JWT authentication. Full stack orchestrated with Docker Compose.",
+    "details": "Task management system built on the principle that everything is a task. The native iOS app (Swift, MVVM) pairs with a Python backend (FastAPI + MongoDB Atlas via Beanie ODM) supporting up to 25 levels of nested hierarchy with a flat-query + app-level tree-building strategy for O(n) performance. Features a polymorphic due-date system (no date, exact datetime, ISO 8601 scoped periods, and recurring intervals), hex-colour tagging, JWT authentication, and children promotion on delete to preserve data. Full stack orchestrated with Docker Compose.",
     "role": "Solo Developer",
     "year": "2026"
   },
   {
     "id": "2",
     "title": "AYERECIPES",
-    "description": "Cloud-native recipe management platform with containerized backend and scalable media storage.",
-    "shortDescription": "Swift recipe app with FastAPI, Docker and AWS S3",
+    "description": "Capture recipes with your camera, manage ingredients and steps, and store images in the cloud — a native iOS app with presigned S3 uploads, haptic feedback, and two-tier image caching.",
+    "shortDescription": "iOS recipe manager with camera capture and S3 cloud storage",
     "technologies": [
       "Swift",
       "Python",
@@ -35,18 +35,18 @@
     ],
     "image": "/projects/ayerecipes.jpg",
     "links": {
-      "github": "",
+      "github": "https://github.com/alberto24dev/AyeRecipes",
       "demo": ""
     },
-    "details": "Scalable iOS app for recipe management. The backend is containerized with Docker for consistent deployment and leverages MongoDB Atlas for data handling and AWS S3 for efficient cloud media storage, representing a production-ready cloud architecture.",
+    "details": "Native iOS recipe app (SwiftUI, MVVM) with camera and photo-library integration, JPEG compression, and CoreHaptics feedback. The FastAPI backend uses presigned S3 URLs for direct client-to-cloud image uploads (10-min PUT, 24-hour GET), MongoDB Atlas for data, and JWT authentication. The iOS client features a two-tier image cache (memory + disk via NSCache) with controlled concurrency (max 4 simultaneous downloads). Containerized with Docker for consistent deployment.",
     "role": "Solo Developer",
     "year": "2026"
   },
   {
     "id": "3",
     "title": "AYEGIRLFRIEND",
-    "description": "AI-powered conversational companion iOS app with a real-time FastAPI backend and persistent memory.",
-    "shortDescription": "Swift AI companion app with FastAPI and MongoDB",
+    "description": "Never forget a thoughtful gesture — track care ideas, plan actions, and log relationship moments from a native iOS app backed by an async FastAPI + MongoDB API.",
+    "shortDescription": "Relationship care tracker for iOS with async Python backend",
     "technologies": [
       "Swift",
       "Python",
@@ -58,15 +58,15 @@
       "github": "",
       "demo": ""
     },
-    "details": "Native iOS application that delivers a personalised AI companion experience. The Python backend (FastAPI + MongoDB) handles conversation history, user context and persistent memory, enabling coherent multi-session interactions through a clean and responsive native interface.",
+    "details": "Relationship care management app designed to help users track thoughtful ideas, plan actions, and log care activities for their partners. The async Python backend (FastAPI + Motor) connects to MongoDB Atlas with three core collections — partners, ideas, and action logs. Built with an async-first architecture using Motor for non-blocking database operations and structured test cases (pytest + mongomock-motor) for isolated testing.",
     "role": "Solo Developer",
     "year": "2026"
   },
   {
     "id": "4",
     "title": "AYESTOCK",
-    "description": "Full-stack inventory management web app with a modern React/Next.js dashboard and RESTful FastAPI backend.",
-    "shortDescription": "Next.js inventory dashboard with FastAPI and MongoDB",
+    "description": "Add products, track stock levels, and search inventory instantly — a bilingual Next.js dashboard with dark mode, async MongoDB queries, and a clean FastAPI REST API.",
+    "shortDescription": "Bilingual inventory dashboard with dark mode and async search",
     "technologies": [
       "Next.js",
       "React",
@@ -81,17 +81,18 @@
       "github": "",
       "demo": ""
     },
-    "details": "Web-based stock and inventory management system. The frontend is built with Next.js and Bootstrap for a responsive dashboard experience, while the Python backend (FastAPI + MongoDB) exposes a clean REST API for product tracking, stock levels and reporting.",
+    "details": "Bilingual (EN/ES) inventory management system with dark mode support. The Next.js 16 frontend provides a responsive dashboard with product creation forms, real-time table displays with color-coded status badges, and regex-powered search. The async Python backend (FastAPI + Motor) exposes a REST API for product CRUD, tracking quantity, buy/sell prices, categories, and active status. Styled with Tailwind CSS for a clean, dark-mode-ready interface.",
     "role": "Solo Developer",
     "year": "2026"
   },
   {
     "id": "5",
     "title": "AYEMUSICVISUALIZER",
-    "description": "Real-time audio visualisation app for iOS that reacts to music through animated waveforms and spectrum displays.",
-    "shortDescription": "Swift audio visualiser with real-time waveform rendering",
+    "description": "Drag, drop, and customize frequency bars that pulse to live audio — a macOS visualizer with per-bar FFT targeting, color interpolation, and interactive positioning.",
+    "shortDescription": "Interactive macOS audio visualizer with draggable frequency bars",
     "technologies": [
       "Swift",
+      "SwiftUI",
       "AVFoundation",
       "Accelerate"
     ],
@@ -100,15 +101,15 @@
       "github": "",
       "demo": ""
     },
-    "details": "Native iOS application that captures and processes live audio input to drive real-time visual animations. Leverages Apple's AVFoundation and Accelerate frameworks for low-latency FFT analysis, rendering dynamic waveform and spectrum views fully in Swift.",
+    "details": "Native macOS application (SwiftUI) that captures live audio via AVAudioEngine and drives real-time, interactive frequency-bar visualizations. Each bar independently targets a frequency (60 Hz–16 kHz) with ±50 Hz bandwidth averaging, is freely draggable on screen, and features smooth color interpolation between low- and high-volume states. Uses Accelerate's vDSP for 2048-sample FFT with a pre-calculated Hann window, reusable buffers, and exponential smoothing (factor 0.3) for jitter-free animation. Includes 9 musical-frequency presets and a toggleable control panel for full-screen immersion.",
     "role": "Solo Developer",
     "year": "2025"
   },
   {
     "id": "6",
     "title": "AYECLICKER",
-    "description": "macOS utility app for customisable global hotkeys and automated click sequences.",
-    "shortDescription": "macOS hotkey and auto-clicker utility in Swift",
+    "description": "A lightweight macOS menu-bar tool for defining global hotkeys and automating click sequences — precision control at your fingertips.",
+    "shortDescription": "macOS automation utility with global hotkeys",
     "technologies": [
       "Swift",
       "AppKit"
@@ -125,8 +126,8 @@
   {
     "id": "7",
     "title": "FATIMA RESENDIZ",
-    "description": "Full-stack photography platform for Fátima Resendiz with a public portfolio, native iOS client portal, email marketing automation, and gallery delivery.",
-    "shortDescription": "Next.js + Swift photography platform with FastAPI, Docker and Railway",
+    "description": "A complete photography business platform — bilingual portfolio with drag-and-drop canvas, client portal with Pic-Time gallery access, lead pipeline CRM, and Brevo email automation.",
+    "shortDescription": "Photography CRM + portfolio with lead pipeline and gallery delivery",
     "technologies": [
       "Next.js",
       "React",
@@ -145,15 +146,15 @@
       "github": "",
       "demo": ""
     },
-    "details": "Multi-platform system built for a professional photographer. The bilingual (EN/ES) Next.js 16 public site showcases the portfolio and captures leads. A native SwiftUI iOS app gives clients secure access to their Pic-Time galleries via JWT-authenticated sessions. The FastAPI + MongoDB backend (Beanie ODM) handles authentication, lead management, testimonials, and email marketing automation via Brevo. Deployed with Docker on Railway.",
+    "details": "Multi-platform system built for a professional photographer. The bilingual (EN/ES) Next.js 15 public site features a drag-and-drop canvas homepage editor, wedding and seasonal portfolio galleries, and a lead capture form with rate limiting. The client portal provides JWT-authenticated access to Pic-Time galleries with invite-based onboarding and refresh-token rotation for mobile. A full admin dashboard tracks clients, sessions, leads (new → contacted → booked → closed), and testimonials with moderation. The FastAPI + MongoDB backend (Beanie ODM) integrates Brevo for automated email marketing — confirmation to prospects and notifications to the photographer. Deployed with Docker on Railway.",
     "role": "Freelance Developer",
     "year": "2026"
   },
   {
     "id": "8",
     "title": "BLINDY",
-    "description": "Cross-platform mobile application for a professional services business, featuring biometric authentication, real-time notifications, Stripe payments and Google Maps integration.",
-    "shortDescription": "Ionic/Angular app with ASP.NET Web API and SQL Server",
+    "description": "Enterprise hybrid app with biometric login, Stripe payments, live notifications, and Google Maps — serving a real professional services business on iOS and Android.",
+    "shortDescription": "Enterprise hybrid app with payments, maps, and real-time updates",
     "technologies": [
       "Ionic",
       "Angular",
@@ -179,8 +180,8 @@
   {
     "id": "9",
     "title": "MEDISCANN",
-    "description": "Cross-platform mobile application for dermatological disease detection using a custom-trained MobileNetV2 AI model.",
-    "shortDescription": "AI-powered dermatological analysis app with MobileNetV2",
+    "description": "Snap a photo, get a diagnosis — cross-platform app that classifies skin conditions in real time using a custom-trained MobileNetV2 neural network.",
+    "shortDescription": "AI skin-condition detector powered by MobileNetV2",
     "technologies": [
       "React Native",
       "Expo",
